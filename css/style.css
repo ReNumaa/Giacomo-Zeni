@@ -608,40 +608,6 @@ button {
   justify-content: center;
 }
 
-/* Scroll indicator */
-.hero__scroll-indicator {
-  position: absolute;
-  bottom: 3.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hero__scroll-indicator span {
-  display: block;
-  width: 26px;
-  height: 42px;
-  border: 2px solid rgba(255,255,255,.2);
-  border-radius: 13px;
-  position: relative;
-}
-
-.hero__scroll-indicator span::after {
-  content: '';
-  position: absolute;
-  top: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 3px;
-  height: 8px;
-  background: var(--gold);
-  border-radius: 2px;
-  animation: scrollBounce 2s ease-in-out infinite;
-}
-
-@keyframes scrollBounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
-  50%      { transform: translateX(-50%) translateY(14px); opacity: .2; }
-}
 
 
 /* ---------- CHI SONO ---------- */
@@ -1812,43 +1778,146 @@ button {
 /* ---------- MOBILE ENHANCEMENTS ---------- */
 @media (max-width: 767px) {
   .hero__content {
-    padding: 8rem 0 5rem;
+    padding: 7rem 0 4rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2.5rem, 12vw, 4rem);
   }
 
   .hero__actions {
     flex-direction: column;
     align-items: stretch;
-    padding: 0 1rem;
+    padding: 0 .5rem;
   }
 
   .hero__actions .btn {
     text-align: center;
+    padding: .875rem 1.5rem;
+    font-size: .875rem;
   }
 
-  .hero__scroll-indicator {
-    bottom: 2rem;
+  .section {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+  }
+
+  .section__title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .section__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .chi-sono__grid {
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .chi-sono__bio {
+    font-size: .9375rem;
   }
 
   .chi-sono__stats {
-    gap: 1rem;
-    padding: 2rem 1rem;
+    gap: .75rem;
+    padding: 1.5rem .75rem;
+  }
+
+  .stat {
+    padding: 1rem .5rem;
+  }
+
+  .stat__number {
+    font-size: 1.75rem;
+  }
+
+  .stat__label {
+    font-size: .625rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card__title {
+    font-size: 1.1rem;
+  }
+
+  .card__text {
+    font-size: .875rem;
   }
 
   .testimonial {
-    padding: 1.75rem;
+    padding: 1.5rem;
+  }
+
+  .testimonial__quote {
+    font-size: 2.5rem;
+  }
+
+  .testimonial__text {
+    font-size: .875rem;
   }
 
   .risultati__grid {
     gap: 1rem;
   }
 
-  .contatti__form-wrapper {
-    padding: 1.5rem;
-    border-radius: var(--radius-lg);
+  .timeline__marker {
+    width: 44px;
+    height: 44px;
   }
 
   .timeline__step {
-    padding-bottom: 2.5rem;
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .timeline__title {
+    font-size: 1rem;
+  }
+
+  .timeline__text {
+    font-size: .875rem;
+  }
+
+  .contatti__form-wrapper {
+    padding: 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .contatti__desc {
+    font-size: .9375rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer__grid {
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer {
+    padding-top: 3rem;
+  }
+
+  .riconoscimenti__card {
+    width: min(400px, 80vw);
+  }
+
+  .riconoscimenti__card-body {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+
+  .riconoscimenti__card-title {
+    font-size: 1rem;
+  }
+
+  .riconoscimenti__list li {
+    font-size: .8125rem;
+  }
+
+  .riconoscimenti__card-desc {
+    font-size: .75rem;
   }
 }
 
