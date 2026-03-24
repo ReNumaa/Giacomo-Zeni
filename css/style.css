@@ -64,6 +64,7 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   scroll-padding-top: 120px;
+  overflow-x: hidden;
 }
 
 body {
@@ -135,6 +136,7 @@ button {
 .section {
   padding: var(--section-py) 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 .section__label {
@@ -531,7 +533,7 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 180px;
+  height: 80px;
   background: linear-gradient(to top, var(--white), transparent);
   pointer-events: none;
 }
