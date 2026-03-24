@@ -63,7 +63,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  scroll-padding-top: 120px;
+  scroll-padding-top: 160px;
   overflow-x: hidden;
 }
 
