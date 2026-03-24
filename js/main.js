@@ -290,16 +290,30 @@
         return;
       }
 
-      // Simulate form submission
+      // Submit to Formspree
       submitBtn.classList.add('btn--loading');
       submitBtn.disabled = true;
 
-      setTimeout(function () {
+      var formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
         submitBtn.classList.remove('btn--loading');
         submitBtn.disabled = false;
-        contactForm.style.display = 'none';
-        formSuccess.classList.add('form__success--visible');
-      }, 1500);
+        if (response.ok) {
+          contactForm.style.display = 'none';
+          formSuccess.classList.add('form__success--visible');
+        } else {
+          alert('Si è verificato un errore. Riprova più tardi.');
+        }
+      }).catch(function () {
+        submitBtn.classList.remove('btn--loading');
+        submitBtn.disabled = false;
+        alert('Errore di connessione. Controlla la tua rete e riprova.');
+      });
     });
   }
 
