@@ -675,39 +675,14 @@ button {
   }
 }
 
-.chi-sono__photo-placeholder {
+.chi-sono__photo-img {
+  width: 100%;
   aspect-ratio: 3 / 4;
-  background: linear-gradient(145deg, var(--navy) 0%, var(--navy-light) 100%);
+  object-fit: cover;
+  object-position: top center;
   border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gray-400);
-  font-size: .8125rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
   position: relative;
   z-index: 1;
-  overflow: hidden;
-}
-
-/* Shimmer effect on placeholder */
-.chi-sono__photo-placeholder::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    transparent 30%,
-    rgba(200, 164, 85, .05) 50%,
-    transparent 70%
-  );
-  animation: shimmer 4s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% { transform: translateX(-100%); }
-  50%      { transform: translateX(100%); }
 }
 
 .chi-sono__photo-accent {
