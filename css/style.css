@@ -1802,12 +1802,25 @@ button {
 
 /* ---------- MOBILE ENHANCEMENTS ---------- */
 @media (max-width: 767px) {
+  .hero {
+    overflow: hidden;
+  }
+
   .hero__content {
     padding: 7rem 0 4rem;
   }
 
   .hero__title {
     font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .chi-sono {
+    overflow-x: hidden;
+  }
+
+  .chi-sono__photo-accent,
+  .chi-sono__photo::before {
+    display: none;
   }
 
   .hero__actions {
