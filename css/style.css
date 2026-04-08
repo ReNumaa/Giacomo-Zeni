@@ -1631,25 +1631,20 @@ button {
 .footer {
   background: var(--navy-dark);
   color: var(--gray-400);
-  padding: 4.5rem 0 0;
+  padding: 3rem 0 0;
 }
 
 .footer__grid {
   display: grid;
   gap: 2.5rem;
-  padding-bottom: 3.5rem;
+  padding-bottom: 2.5rem;
   border-bottom: 1px solid rgba(255,255,255,.06);
 }
 
 @media (min-width: 640px) {
   .footer__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 992px) {
-  .footer__grid {
-    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: start;
   }
 }
 
@@ -1657,6 +1652,12 @@ button {
   font-size: .875rem;
   color: var(--gray-500);
   margin-top: .75rem;
+}
+
+.footer__address {
+  font-size: .8125rem;
+  color: var(--gray-500);
+  margin-top: .375rem;
 }
 
 .footer__heading {
@@ -1690,6 +1691,7 @@ button {
 .footer__social-links {
   display: flex;
   gap: .75rem;
+  margin-top: 1rem;
 }
 
 .footer__social-link {
@@ -1716,11 +1718,12 @@ button {
 .footer__bottom {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: .5rem;
-  padding: 1.75rem 0;
-  font-size: .8125rem;
+  padding: 1.5rem 0;
+  font-size: .75rem;
   color: var(--gray-500);
+  text-align: center;
 }
 
 .footer .navbar__brand {
@@ -1945,12 +1948,12 @@ button {
   }
 
   .footer__grid {
-    gap: 2rem;
-    padding-bottom: 2rem;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .footer {
-    padding-top: 3rem;
+    padding-top: 2.5rem;
   }
 
   .riconoscimenti__card {
