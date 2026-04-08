@@ -198,10 +198,8 @@
   /* ---------- FORM VALIDATION ---------- */
   var validationRules = {
     nome:       { required: true, message: 'Inserisci il tuo nome.' },
-    cognome:    { required: true, message: 'Inserisci il tuo cognome.' },
     email:      { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Inserisci un indirizzo email valido.' },
     telefono:   { required: false, pattern: /^[+]?[\d\s\-().]{7,20}$/, message: 'Inserisci un numero di telefono valido.' },
-    consulenza: { required: true, message: 'Seleziona il tipo di consulenza.' },
     messaggio:  { required: true, message: 'Inserisci un messaggio.' },
     privacy:    { required: true, message: 'Devi accettare l\'informativa sulla privacy.' }
   };

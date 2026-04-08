@@ -461,57 +461,31 @@
             <form class="form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
               <div class="form__row">
                 <div class="form__group">
-                  <label for="nome" class="form__label">Nome <span class="form__required" aria-label="campo obbligatorio">*</span></label>
-                  <input type="text" id="nome" name="nome" class="form__input" required autocomplete="given-name" placeholder="Il tuo nome">
+                  <label for="nome" class="form__label">Nome e Cognome <span class="form__required" aria-label="campo obbligatorio">*</span></label>
+                  <input type="text" id="nome" name="nome" class="form__input" required autocomplete="name" placeholder="Il tuo nome">
                   <span class="form__error" role="alert" aria-live="polite"></span>
                 </div>
-                <div class="form__group">
-                  <label for="cognome" class="form__label">Cognome <span class="form__required" aria-label="campo obbligatorio">*</span></label>
-                  <input type="text" id="cognome" name="cognome" class="form__input" required autocomplete="family-name" placeholder="Il tuo cognome">
-                  <span class="form__error" role="alert" aria-live="polite"></span>
-                </div>
-              </div>
-              <div class="form__row">
                 <div class="form__group">
                   <label for="email" class="form__label">Email <span class="form__required" aria-label="campo obbligatorio">*</span></label>
                   <input type="email" id="email" name="email" class="form__input" required autocomplete="email" placeholder="nome@azienda.it">
                   <span class="form__error" role="alert" aria-live="polite"></span>
                 </div>
+              </div>
+              <div class="form__row">
                 <div class="form__group">
                   <label for="telefono" class="form__label">Telefono</label>
                   <input type="tel" id="telefono" name="telefono" class="form__input" autocomplete="tel" placeholder="+39 000 000 0000">
                   <span class="form__error" role="alert" aria-live="polite"></span>
                 </div>
-              </div>
-              <div class="form__row">
                 <div class="form__group">
                   <label for="azienda" class="form__label">Azienda</label>
                   <input type="text" id="azienda" name="azienda" class="form__input" autocomplete="organization" placeholder="Nome dell'azienda">
                   <span class="form__error" role="alert" aria-live="polite"></span>
                 </div>
-                <div class="form__group">
-                  <label for="ruolo" class="form__label">Ruolo</label>
-                  <input type="text" id="ruolo" name="ruolo" class="form__input" autocomplete="organization-title" placeholder="Il tuo ruolo in azienda">
-                  <span class="form__error" role="alert" aria-live="polite"></span>
-                </div>
-              </div>
-              <div class="form__group">
-                <label for="consulenza" class="form__label">Tipo di Consulenza <span class="form__required" aria-label="campo obbligatorio">*</span></label>
-                <select id="consulenza" name="consulenza" class="form__input form__select" required>
-                  <option value="" disabled selected>Seleziona il tipo di consulenza</option>
-                  <option value="temporary-management">Temporary Management</option>
-                  <option value="ristrutturazione">Ristrutturazione Aziendale</option>
-                  <option value="change-management">Change Management</option>
-                  <option value="direzione-interim">Direzione ad Interim</option>
-                  <option value="consulenza-strategica">Consulenza Strategica</option>
-                  <option value="internazionalizzazione">Internazionalizzazione e Trade Management</option>
-                  <option value="altro">Altro</option>
-                </select>
-                <span class="form__error" role="alert" aria-live="polite"></span>
               </div>
               <div class="form__group">
                 <label for="messaggio" class="form__label">Messaggio <span class="form__required" aria-label="campo obbligatorio">*</span></label>
-                <textarea id="messaggio" name="messaggio" class="form__input form__textarea" rows="5" required placeholder="Descrivi brevemente le esigenze della tua azienda..."></textarea>
+                <textarea id="messaggio" name="messaggio" class="form__input form__textarea" rows="4" required placeholder="Descrivi brevemente le esigenze della tua azienda..."></textarea>
                 <span class="form__error" role="alert" aria-live="polite"></span>
               </div>
               <div class="form__group form__group--checkbox">
