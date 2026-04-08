@@ -1820,9 +1820,22 @@ button {
     overflow-x: hidden;
   }
 
-  .chi-sono__photo-accent,
+  .chi-sono__photo {
+    padding: 8px;
+  }
+
+  .chi-sono__photo-accent {
+    bottom: -8px;
+    right: -8px;
+    width: 45%;
+    height: 45%;
+  }
+
   .chi-sono__photo::before {
-    display: none;
+    top: -6px;
+    left: -6px;
+    width: 30%;
+    height: 30%;
   }
 
   .hero__actions {
