@@ -1148,100 +1148,177 @@ button {
 }
 
 
-/* ---------- RICONOSCIMENTI ---------- */
-.riconoscimenti {
+/* ---------- IN PRIMO PIANO ---------- */
+.primo-piano {
   background: var(--gray-50);
-  overflow: hidden;
 }
 
-/* Scrolling track */
-.riconoscimenti__track {
-  overflow: hidden;
-  padding: 1rem 0 2rem;
+/* Tags */
+.pp-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: .6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: .25rem .75rem;
+  border-radius: 100px;
+  margin-bottom: .75rem;
 }
 
-.riconoscimenti__slide {
-  display: flex;
-  gap: 2rem;
-  width: max-content;
-  animation: scroll-left 20s linear infinite;
+.pp-tag--premio {
+  background: rgba(200, 164, 85, .15);
+  color: var(--gold-dark);
 }
 
-.riconoscimenti__slide:hover {
-  animation-play-state: paused;
+.pp-tag--stampa {
+  background: rgba(26, 35, 50, .08);
+  color: var(--navy);
 }
 
-@keyframes scroll-left {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.pp-tag--evento {
+  background: rgba(59, 130, 246, .1);
+  color: #2563eb;
 }
 
-/* Card */
-.riconoscimenti__card {
-  flex-shrink: 0;
-  width: min(550px, 85vw);
+/* Featured card (Le Fonti Awards) */
+.pp-featured {
+  display: grid;
+  grid-template-columns: 1fr;
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+  cursor: pointer;
   transition: box-shadow .4s var(--ease), transform .4s var(--ease);
 }
 
-.riconoscimenti__card:hover {
+.pp-featured:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.pp-featured__img {
+  overflow: hidden;
+}
+
+.pp-featured__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pp-featured__body {
+  padding: 1.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pp-featured__title {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  color: var(--navy);
+  margin-bottom: .75rem;
+  line-height: 1.3;
+}
+
+.pp-featured__text {
+  font-size: .9375rem;
+  line-height: 1.7;
+  color: var(--gray-600);
+}
+
+@media (min-width: 768px) {
+  .pp-featured {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .pp-featured__img img {
+    height: 260px;
+  }
+
+  .pp-featured__title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Grid */
+.pp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .pp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .pp-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Card */
+.pp-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: box-shadow .4s var(--ease), transform .4s var(--ease);
+}
+
+.pp-card:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
 }
 
-.riconoscimenti__card-img img {
-  width: 100%;
-  display: block;
-}
-
-.riconoscimenti__card-body {
-  padding: 1.5rem 2rem 2rem;
-}
-
-.riconoscimenti__card-title {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  color: var(--navy);
-  margin-bottom: 1rem;
-}
-
-.riconoscimenti__list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.25rem;
-}
-
-.riconoscimenti__list li {
+.pp-card__img {
   position: relative;
-  padding-left: 1.5rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.pp-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s var(--ease);
+}
+
+.pp-card:hover .pp-card__img img {
+  transform: scale(1.04);
+}
+
+.pp-card__body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.pp-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  color: var(--navy);
   margin-bottom: .5rem;
-  font-size: .9375rem;
-  line-height: 1.6;
-  color: var(--gray-700);
+  line-height: 1.35;
 }
 
-.riconoscimenti__list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: .55em;
-  width: 8px;
-  height: 8px;
-  background: var(--gold);
-  border-radius: 50%;
-}
-
-.riconoscimenti__card-desc {
-  font-size: .875rem;
+.pp-card__text {
+  font-size: .8125rem;
   line-height: 1.7;
   color: var(--gray-500);
 }
 
-.riconoscimenti__card[data-award] {
+[data-lightbox] {
   cursor: pointer;
 }
 
@@ -1333,37 +1410,10 @@ button {
   margin-bottom: 1.25rem;
 }
 
-.modal__text {
+.modal__desc {
   font-size: .9375rem;
   line-height: 1.8;
   color: var(--gray-600);
-}
-
-.modal__text ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.25rem;
-}
-
-.modal__text ul li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: .5rem;
-}
-
-.modal__text ul li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: .55em;
-  width: 8px;
-  height: 8px;
-  background: var(--gold);
-  border-radius: 50%;
-}
-
-.modal__text p {
-  margin-bottom: 1rem;
 }
 
 
@@ -1956,23 +2006,23 @@ button {
     padding-top: 2.5rem;
   }
 
-  .riconoscimenti__card {
-    width: min(400px, 80vw);
+  .pp-featured__body {
+    padding: 1.25rem;
   }
 
-  .riconoscimenti__card-body {
+  .pp-featured__title {
+    font-size: 1.125rem;
+  }
+
+  .pp-card__body {
     padding: 1rem 1.25rem 1.25rem;
   }
 
-  .riconoscimenti__card-title {
-    font-size: 1rem;
+  .pp-card__title {
+    font-size: .9375rem;
   }
 
-  .riconoscimenti__list li {
-    font-size: .8125rem;
-  }
-
-  .riconoscimenti__card-desc {
+  .pp-card__text {
     font-size: .75rem;
   }
 }

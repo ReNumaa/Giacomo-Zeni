@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=9">
 </head>
 <body>
 
@@ -38,7 +38,7 @@
           <li><a href="#servizi" class="navbar__link">Servizi</a></li>
           <li><a href="#approccio" class="navbar__link">Approccio</a></li>
           <li><a href="#risultati" class="navbar__link">Risultati</a></li>
-          <li><a href="#riconoscimenti" class="navbar__link">Riconoscimenti</a></li>
+          <li><a href="#riconoscimenti" class="navbar__link">In Primo Piano</a></li>
           <li><a href="#contatti" class="navbar__link navbar__link--cta">Richiedi Consulenza</a></li>
         </ul>
       </nav>
@@ -346,82 +346,97 @@
       </div>
     </section>
 
-    <!-- ========== RICONOSCIMENTI ========== -->
-    <section class="section riconoscimenti" id="riconoscimenti" aria-labelledby="riconoscimenti-title">
+    <!-- ========== IN PRIMO PIANO ========== -->
+    <section class="section primo-piano" id="riconoscimenti" aria-labelledby="riconoscimenti-title">
       <div class="container">
         <div class="section__header animate-on-scroll fade-up">
-          <p class="section__label">Riconoscimenti</p>
-          <h2 class="section__title" id="riconoscimenti-title">Premi e Nomination</h2>
+          <p class="section__label">In Primo Piano</p>
+          <h2 class="section__title" id="riconoscimenti-title">Stampa, Premi e<br>Riconoscimenti</h2>
         </div>
-      </div>
 
-      <div class="riconoscimenti__track">
-        <div class="riconoscimenti__slide">
+        <!-- FEATURED: Le Fonti Awards -->
+        <article class="pp-featured animate-on-scroll fade-up" role="button" tabindex="0" data-lightbox>
+          <div class="pp-featured__img">
+            <img src="Riconoscimenti/1720681085850.jpg" alt="Le Fonti Awards Pre-Finalist 2024" loading="lazy">
+          </div>
+          <div class="pp-featured__body">
+            <span class="pp-tag pp-tag--premio">Premio</span>
+            <h3 class="pp-featured__title">Le Fonti Awards&reg; &mdash; Pre-Finalist 2024</h3>
+            <p class="pp-featured__text">
+              Selezione nelle categorie <strong>Managing Director dell'Anno</strong> e
+              <strong>Eccellenza dell'Anno &mdash; Innovazione &amp; Leadership</strong>.
+              Cerimonia presso Borsa Italiana, Palazzo Mezzanotte, Milano &mdash;
+              XIV edizione annuale.
+            </p>
+          </div>
+        </article>
 
-          <!-- AWARD 1 -->
-          <article class="riconoscimenti__card" data-award="award-1" role="button" tabindex="0">
-            <div class="riconoscimenti__card-img">
-              <img src="Riconoscimenti/1720681085850.jpg" alt="Le Fonti Awards Pre-Finalist 2024" loading="lazy">
+        <!-- GRID -->
+        <div class="pp-grid">
+
+          <article class="pp-card animate-on-scroll fade-up" role="button" tabindex="0" data-lightbox>
+            <div class="pp-card__img">
+              <img src="Riconoscimenti/1597882217877.jpg" alt="Russian Business Guide — Copertina con Giacomo Zeni" loading="lazy">
             </div>
-            <div class="riconoscimenti__card-body">
-              <h3 class="riconoscimenti__card-title">Le Fonti Awards&reg; &mdash; Pre-Finalist 2024</h3>
-              <ul class="riconoscimenti__list">
-                <li><strong>Managing Director dell'Anno</strong> &mdash; categoria speciale</li>
-                <li><strong>Eccellenza dell'Anno &mdash; Innovazione &amp; Leadership</strong> &mdash; categoria speciale</li>
-              </ul>
-              <p class="riconoscimenti__card-desc">
-                Selezione presso <strong>Borsa Italiana</strong> (Palazzo Mezzanotte), 10 Ottobre 2024 &mdash; XIV edizione annuale dei Le Fonti Awards&reg;.
-              </p>
+            <div class="pp-card__body">
+              <span class="pp-tag pp-tag--stampa">Stampa</span>
+              <h3 class="pp-card__title">Russian Business Guide &mdash; Copertina</h3>
+              <p class="pp-card__text">Copertina del numero 15 di RBG (Giugno 2018). Intervista a Giacomo Zeni, General Director OOO Fondital Lipetsk, sulla produzione per il mercato russo.</p>
             </div>
           </article>
 
-          <!-- AWARD 2 -->
-          <article class="riconoscimenti__card" data-award="award-2" role="button" tabindex="0">
-            <div class="riconoscimenti__card-img">
-              <img src="Riconoscimenti/1653297385477.jpg" alt="Tobanelli SPA — Un percorso di crescita importante" loading="lazy">
+          <article class="pp-card animate-on-scroll fade-up delay-1" role="button" tabindex="0" data-lightbox>
+            <div class="pp-card__img">
+              <img src="Riconoscimenti/1619500734382.jpg" alt="Tobanelli SPA — Zeni Nuovo Amministratore Delegato" loading="lazy">
             </div>
-            <div class="riconoscimenti__card-body">
-              <h3 class="riconoscimenti__card-title">Lorem ipsum dolor sit amet</h3>
-              <ul class="riconoscimenti__list">
-                <li><strong>Lorem ipsum dolor</strong> &mdash; sit amet consectetur</li>
-                <li><strong>Adipiscing elit</strong> &mdash; sed do eiusmod tempor</li>
-              </ul>
-              <p class="riconoscimenti__card-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+            <div class="pp-card__body">
+              <span class="pp-tag pp-tag--stampa">Stampa</span>
+              <h3 class="pp-card__title">Tobanelli SPA &mdash; Zeni Nuovo A.D.</h3>
+              <p class="pp-card__text">Nomina ad Amministratore Delegato di Tobanelli SPA, azienda leader nell'economia circolare dell'alluminio riciclato a Bedizzole (BS).</p>
             </div>
           </article>
 
-          <!-- Duplicati per loop continuo -->
-          <article class="riconoscimenti__card" data-award="award-1" role="button" tabindex="-1" aria-hidden="true">
-            <div class="riconoscimenti__card-img">
-              <img src="Riconoscimenti/1720681085850.jpg" alt="" loading="lazy">
+          <article class="pp-card animate-on-scroll fade-up delay-2" role="button" tabindex="0" data-lightbox>
+            <div class="pp-card__img">
+              <img src="Riconoscimenti/1652946203444.jpg" alt="Speciale Aziende Eccellenti — Tobanelli SPA" loading="lazy">
             </div>
-            <div class="riconoscimenti__card-body">
-              <h3 class="riconoscimenti__card-title">Le Fonti Awards&reg; &mdash; Pre-Finalist 2024</h3>
-              <ul class="riconoscimenti__list">
-                <li><strong>Managing Director dell'Anno</strong> &mdash; categoria speciale</li>
-                <li><strong>Eccellenza dell'Anno &mdash; Innovazione &amp; Leadership</strong> &mdash; categoria speciale</li>
-              </ul>
-              <p class="riconoscimenti__card-desc">
-                Selezione presso <strong>Borsa Italiana</strong> (Palazzo Mezzanotte), 10 Ottobre 2024 &mdash; XIV edizione annuale dei Le Fonti Awards&reg;.
-              </p>
+            <div class="pp-card__body">
+              <span class="pp-tag pp-tag--stampa">Stampa</span>
+              <h3 class="pp-card__title">Aziende Eccellenti &mdash; Tobanelli SPA</h3>
+              <p class="pp-card__text">Speciale BresciaOggi: il percorso di crescita di Tobanelli continua nel 2022 con fatturato oltre 104 milioni di euro e investimenti nell'economia circolare.</p>
             </div>
           </article>
 
-          <article class="riconoscimenti__card" data-award="award-2" role="button" tabindex="-1" aria-hidden="true">
-            <div class="riconoscimenti__card-img">
-              <img src="Riconoscimenti/1653297385477.jpg" alt="" loading="lazy">
+          <article class="pp-card animate-on-scroll fade-up" role="button" tabindex="0" data-lightbox>
+            <div class="pp-card__img">
+              <img src="Riconoscimenti/1601349391438.jpg" alt="Smart Export — Federazione ANIMA" loading="lazy">
             </div>
-            <div class="riconoscimenti__card-body">
-              <h3 class="riconoscimenti__card-title">Lorem ipsum dolor sit amet</h3>
-              <ul class="riconoscimenti__list">
-                <li><strong>Lorem ipsum dolor</strong> &mdash; sit amet consectetur</li>
-                <li><strong>Adipiscing elit</strong> &mdash; sed do eiusmod tempor</li>
-              </ul>
-              <p class="riconoscimenti__card-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+            <div class="pp-card__body">
+              <span class="pp-tag pp-tag--evento">Evento</span>
+              <h3 class="pp-card__title">Smart Export &mdash; Federazione ANIMA</h3>
+              <p class="pp-card__text">Tavola rotonda sull'internazionalizzazione della meccanica italiana. Evento promosso da ANIMA per il supporto all'export delle imprese.</p>
+            </div>
+          </article>
+
+          <article class="pp-card animate-on-scroll fade-up delay-1" role="button" tabindex="0" data-lightbox>
+            <div class="pp-card__img">
+              <img src="Riconoscimenti/1596578120133.jpg" alt="Convegno Associazione Industriale Bresciana" loading="lazy">
+            </div>
+            <div class="pp-card__body">
+              <span class="pp-tag pp-tag--evento">Evento</span>
+              <h3 class="pp-card__title">Associazione Industriale Bresciana</h3>
+              <p class="pp-card__text">Relatore al convegno AIB sulla cooperazione industriale internazionale e le opportunit&agrave; di investimento nei mercati esteri.</p>
+            </div>
+          </article>
+
+          <article class="pp-card animate-on-scroll fade-up delay-2" role="button" tabindex="0" data-lightbox>
+            <div class="pp-card__img">
+              <img src="Riconoscimenti/1635500679759.jpg" alt="Delegazione russa a Brescia — Missione d'affari" loading="lazy">
+            </div>
+            <div class="pp-card__body">
+              <span class="pp-tag pp-tag--stampa">Stampa</span>
+              <h3 class="pp-card__title">Delegazione Russa a Brescia</h3>
+              <p class="pp-card__text">Missione d'affari con delegazione industriale russa a Brescia. Incontri con imprenditori bresciani per sviluppo di partnership commerciali.</p>
             </div>
           </article>
 
@@ -511,7 +526,7 @@
 
   </main>
 
-  <!-- ========== AWARD MODAL ========== -->
+  <!-- ========== LIGHTBOX MODAL ========== -->
   <div class="modal" id="awardModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
     <div class="modal__overlay"></div>
     <div class="modal__content">
@@ -521,7 +536,7 @@
       </div>
       <div class="modal__body">
         <h3 class="modal__title" id="modalTitle"></h3>
-        <div class="modal__text" id="modalText"></div>
+        <p class="modal__desc" id="modalText"></p>
       </div>
     </div>
   </div>
@@ -564,6 +579,6 @@
     <span aria-hidden="true">&#8593;</span>
   </button>
 
-  <script src="js/main.js?v=8"></script>
+  <script src="js/main.js?v=9"></script>
 </body>
 </html>

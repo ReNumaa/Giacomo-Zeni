@@ -316,39 +316,31 @@
   }
 
 
-  /* ---------- AWARD MODAL ---------- */
+  /* ---------- LIGHTBOX MODAL ---------- */
   var awardModal   = document.getElementById('awardModal');
   var modalImg     = document.getElementById('modalImg');
   var modalTitle   = document.getElementById('modalTitle');
   var modalText    = document.getElementById('modalText');
   var modalClose   = document.getElementById('modalClose');
-  var awardCards   = document.querySelectorAll('.riconoscimenti__card[data-award]');
+  var lightboxCards = document.querySelectorAll('[data-lightbox]');
 
-  function openAwardModal(card) {
-    var img   = card.querySelector('.riconoscimenti__card-img img');
-    var title = card.querySelector('.riconoscimenti__card-title');
-    var body  = card.querySelector('.riconoscimenti__card-body');
+  function openLightbox(card) {
+    var img   = card.querySelector('img');
+    var title = card.querySelector('.pp-featured__title, .pp-card__title');
+    var text  = card.querySelector('.pp-featured__text, .pp-card__text');
 
     modalImg.src = img.src;
-    modalImg.alt = img.alt || title.textContent;
-    modalTitle.textContent = title.textContent;
-
-    // Clone the list and description into the modal
-    var html = '';
-    var list = card.querySelector('.riconoscimenti__list');
-    var desc = card.querySelector('.riconoscimenti__card-desc');
-    if (list) html += list.outerHTML;
-    if (desc) html += '<p>' + desc.innerHTML + '</p>';
-    modalText.innerHTML = html;
+    modalImg.alt = img.alt || (title ? title.textContent : '');
+    modalTitle.textContent = title ? title.textContent : '';
+    modalText.textContent  = text  ? text.textContent  : '';
 
     awardModal.hidden = false;
-    // Force reflow before adding class for transition
     awardModal.offsetHeight;
     awardModal.classList.add('modal--open');
     document.body.style.overflow = 'hidden';
   }
 
-  function closeAwardModal() {
+  function closeLightbox() {
     awardModal.classList.remove('modal--open');
     document.body.style.overflow = '';
     setTimeout(function () {
@@ -356,25 +348,25 @@
     }, 350);
   }
 
-  awardCards.forEach(function (card) {
+  lightboxCards.forEach(function (card) {
     card.addEventListener('click', function () {
-      openAwardModal(card);
+      openLightbox(card);
     });
     card.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        openAwardModal(card);
+        openLightbox(card);
       }
     });
   });
 
-  modalClose.addEventListener('click', closeAwardModal);
+  modalClose.addEventListener('click', closeLightbox);
 
-  awardModal.querySelector('.modal__overlay').addEventListener('click', closeAwardModal);
+  awardModal.querySelector('.modal__overlay').addEventListener('click', closeLightbox);
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && awardModal.classList.contains('modal--open')) {
-      closeAwardModal();
+      closeLightbox();
     }
   });
 
