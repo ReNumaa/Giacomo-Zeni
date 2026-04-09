@@ -1299,34 +1299,88 @@ button {
 }
 
 /* Grid — horizontal scroll on mobile */
+.pp-grid-wrap {
+  position: relative;
+}
+
 .pp-grid {
   display: flex;
-  gap: 1rem;
+  gap: .75rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-padding-left: 1.25rem;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: .5rem;
-  scrollbar-width: none;          /* Firefox */
+  padding: 0 1.25rem .75rem;
+  scrollbar-width: none;
 }
 
 .pp-grid::-webkit-scrollbar {
-  display: none;                  /* Chrome / Safari */
+  display: none;
 }
 
 .pp-grid > .pp-card {
-  flex: 0 0 75vw;
-  max-width: 300px;
+  flex: 0 0 68vw;
+  max-width: 280px;
   scroll-snap-align: start;
 }
 
+/* Fade-out gradient on right edge — scroll affordance */
+.pp-grid-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: .75rem;
+  width: 3rem;
+  background: linear-gradient(to right, transparent, var(--gray-50));
+  pointer-events: none;
+  transition: opacity .3s;
+}
+
+.pp-grid-wrap.scrolled-end::after {
+  opacity: 0;
+}
+
+/* Scroll dots indicator */
+.pp-dots {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  padding-top: .75rem;
+}
+
+.pp-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gray-300);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background .3s, transform .3s;
+}
+
+.pp-dot.active {
+  background: var(--navy);
+  transform: scale(1.4);
+}
+
 @media (min-width: 600px) {
+  .pp-grid-wrap::after {
+    display: none;
+  }
+
+  .pp-dots {
+    display: none;
+  }
+
   .pp-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     overflow-x: visible;
     scroll-snap-type: none;
     gap: 1.5rem;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .pp-grid > .pp-card {

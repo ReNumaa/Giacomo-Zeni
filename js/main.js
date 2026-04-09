@@ -316,6 +316,47 @@
   }
 
 
+  /* ---------- CAROUSEL DOTS & SCROLL AFFORDANCE ---------- */
+  (function () {
+    var grid = document.querySelector('.pp-grid');
+    var wrap = document.querySelector('.pp-grid-wrap');
+    var dotsContainer = document.querySelector('.pp-dots');
+    if (!grid || !dotsContainer) return;
+
+    var cards = grid.querySelectorAll('.pp-card');
+    if (!cards.length) return;
+
+    // Build dots
+    cards.forEach(function (_, i) {
+      var dot = document.createElement('button');
+      dot.className = 'pp-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Vai alla card ' + (i + 1));
+      dot.addEventListener('click', function () {
+        cards[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    var dots = dotsContainer.querySelectorAll('.pp-dot');
+
+    // Update active dot & gradient on scroll
+    grid.addEventListener('scroll', function () {
+      var scrollLeft = grid.scrollLeft;
+      var cardWidth = cards[0].offsetWidth + 12; // gap ~.75rem
+      var activeIndex = Math.round(scrollLeft / cardWidth);
+      dots.forEach(function (d, i) {
+        d.classList.toggle('active', i === activeIndex);
+      });
+
+      // Hide gradient when scrolled to end
+      if (wrap) {
+        var atEnd = grid.scrollLeft + grid.offsetWidth >= grid.scrollWidth - 10;
+        wrap.classList.toggle('scrolled-end', atEnd);
+      }
+    }, { passive: true });
+  })();
+
+
   /* ---------- LIGHTBOX MODAL ---------- */
   var awardModal   = document.getElementById('awardModal');
   var modalImg     = document.getElementById('modalImg');
