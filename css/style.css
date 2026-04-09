@@ -1232,33 +1232,10 @@ button {
   color: var(--gray-600);
 }
 
-/* Mobile: compact featured card */
+/* Mobile: hide featured card, compact grid cards */
 @media (max-width: 767px) {
   .pp-featured {
-    grid-template-columns: 100px 1fr;
-  }
-
-  .pp-featured__img img {
-    height: 100%;
-    min-height: 120px;
-  }
-
-  .pp-featured__body {
-    padding: 1rem 1.25rem;
-  }
-
-  .pp-featured__title {
-    font-size: 1.1rem;
-    margin-bottom: .4rem;
-  }
-
-  .pp-featured__text {
-    font-size: .8125rem;
-    line-height: 1.5;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    display: none;
   }
 
   .pp-card__body {
@@ -1486,9 +1463,9 @@ button {
   position: relative;
   background: var(--white);
   border-radius: var(--radius-xl);
-  max-width: 700px;
-  width: 90vw;
-  max-height: 90vh;
+  max-width: 440px;
+  width: 85vw;
+  max-height: 80vh;
   overflow-y: auto;
   box-shadow: var(--shadow-xl);
   transform: translateY(30px) scale(.96);
@@ -1525,24 +1502,27 @@ button {
 
 .modal__img img {
   width: 100%;
+  max-height: 45vh;
+  object-fit: contain;
   display: block;
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  background: var(--gray-50);
 }
 
 .modal__body {
-  padding: 2rem 2.5rem 2.5rem;
+  padding: 1.25rem 1.5rem 1.5rem;
 }
 
 .modal__title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--navy);
-  margin-bottom: 1.25rem;
+  margin-bottom: .75rem;
 }
 
 .modal__desc {
-  font-size: .9375rem;
-  line-height: 1.8;
+  font-size: .875rem;
+  line-height: 1.7;
   color: var(--gray-600);
 }
 
