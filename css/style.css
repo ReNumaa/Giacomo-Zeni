@@ -1259,6 +1259,13 @@ button {
   .pp-card__img {
     aspect-ratio: 3 / 2;
   }
+
+  /* Disable scroll animations on carousel cards */
+  .pp-grid .pp-card.animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (min-width: 768px) {
