@@ -288,7 +288,7 @@
         return;
       }
 
-      // Submit to Formspree
+      // Submit to Web3Forms
       submitBtn.classList.add('btn--loading');
       submitBtn.disabled = true;
 

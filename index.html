@@ -476,7 +476,11 @@
           </div>
 
           <div class="contatti__form-wrapper animate-on-scroll fade-left">
-            <form class="form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <form class="form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <input type="hidden" name="access_key" value="9aaa6a2f-93ca-4cc2-8c3a-08575f1998c9">
+              <input type="hidden" name="subject" value="Nuova richiesta consulenza dal sito">
+              <input type="hidden" name="from_name" value="Sito Giacomo Zeni">
+              <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
               <div class="form__row">
                 <div class="form__group">
                   <label for="nome" class="form__label">Nome e Cognome <span class="form__required" aria-label="campo obbligatorio">*</span></label>
