@@ -1787,10 +1787,20 @@ button {
   box-shadow: var(--shadow-gold);
 }
 
-.form__success p {
-  font-size: 1.125rem;
+.form__success-title {
+  font-size: 1.5rem;
   color: var(--navy);
-  font-weight: 500;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.form__success p {
+  font-size: 1.0625rem;
+  color: var(--gray-600, #4a5568);
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 32rem;
+  margin: 0 auto;
 }
 
 
